@@ -1,4 +1,7 @@
 print('welcome to my quiz!')
+print("                                                                             ")
 print('what is your name?')
+print("                                                                             ")
 name = input('enter your name:')
+print("                                                                             ")
 print("hello" ,name + "!")
