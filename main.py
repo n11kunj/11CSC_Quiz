@@ -10,7 +10,7 @@ print("About the quiz: My quiz is abut videogames tip dont type out the option i
 print("\n")
 
 
-n_questions ={''}
+n_questions ={'1.What is the best selling videogame of all time? \n a.Minecraft\n b.'}
    
 
 
