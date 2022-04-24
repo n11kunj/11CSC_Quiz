@@ -1,26 +1,45 @@
-print("welcome to my quiz!")
-print("\n")
-input("Press enter to continue!")
-print("\n")
-name = input ("what is you username?:")
-print("\n")
-print("welcome to my quiz!", name)
-print("\n")
-print("About the quiz: My quiz is abut videogames tip dont type out the option instead type out the letter in lowercase enjoy!")
-print("\n")
-input("Press enter to continue!")
-print("\n")
-n_questions ={'1.What is the best selling videogame of all time? \n a.Minecraft\n b.call Of Duty Black Ops\n c.Grand Theft Auto 5\n Answer:' : 'a' , '\n 2.What is the name of the final course of all mario kart video games? \na.ghost valleys\nb. bowsers castle\nc.rainbow Road \n answer: ' : 'c', '\n 3.Solid Snake is the hero of the famous video game franchise? \na.Gears of war\nb.The Metal Gear\nc.COD Ghosts\n answer:' : 'b', '\n 4.Which famous video game franchise is the game V-Bucks from? \na.Valorant\nb.Fortnite\nc.RDR2\n answer:' : 'b' , '\n 5.Who is the first character you play in Injustice 2?\na.Batman\nb.superman\nc.Green Lantern\n answer:' : 'a', '\n 6.Fight Night 2004 is a game about what kind of sport?\na.boxing\nb.mma\nc.karate\n answer:' : 'a', '\n 7.Piemonte Calcio represents which real life club in the FIFA 20 video game?\na.real madrid\nb.man united\nc.juventus\n answer:' : 'c', '\n 8.In which game do players compete in the future version of soccer with cars?\na.forza\nb.rocket leugue\nc.asetto corsa\n answer:' : 'b','\n 9.What is the highest grossing game of all time?\na.Pokémon\nb.Tetris\nc.street fighter\n answer: ' : 'a', '\n 10.Whos on the cover of the video game Madden NFL 18?\na.lebron james\nb.OBJ\nc.tom brady\n answer:' : 'c'}  
-score = 0
+#Welcome/Start
+def start():
+  print("welcome to my quiz!")
+  print("\n")
+  input("press enter to continue!")
+  print("\n")
+  while True:
+    n = input("enter your username:").strip()
+    if n.isalpha():
+      print("\n")
+      print("welcome to my quiz "+ n)
+      break
+    else:
+      print("\n")
+      print("please enter your username with letters only, this is required!")
 
-for n in n_questions.keys():
-  user_answer = input(n)
-  if n_questions.get(n) == user_answer:
-    score+= 1
-    print("Correct")
-    print("score:", score )
-  else:
-    print("incorrect, The answer was:",n_questions.get(n))
-    print("score: " ,score)
-    print("\n")
-print('Thank you for playing my quiz!!!')    
+  print("\n")
+  print("this quiz is about videogames tip dont type out the option instead type out the letter in lowercase enjoy!")
+  print("\n")
+  input("press enter to continue!")
+  print("\n")
+#Dictionary 
+def quiz():
+  n_questions ={'1.what is the best selling videogame of all time? \n a.minecraft\n b.call of duty black ops\n c.grand theft auto 5\n Answer:' : 'a' , '\n 2.What is the name of the final course of all mario kart video games? \na.g\ghost valley\nb.bowsers castle\nc.rainbow road \n answer: ' : 'c', '\n 3.solid snake is the hero of the famous video game franchise? \na.gears of war\nb.the metal gear\nc.cod ghosts\n answer:' : 'b', '\n 4.which famous video game franchise is the game v-bucks from?\na.valorant\nb.fortnite\nc.rdr2\n answer:' : 'b' , '\n 5.who is the first character you play in injustice 2?\na.batman\nb.superman\nc.green lantern\n answer:' : 'a', '\n 6.fight night 2004 is a game about what kind of sport?\na.boxing\nb.mma\nc.karate\n answer:' : 'a', '\n 7.piemonte calcio represents which real life club in the fifa 20 video game?\na.real madrid\nb.manchester united\nc.juventus\n answer:' : 'c', '\n 8.in which game do players compete in the future version of soccer with cars?\na.forza horizon\nb.rocket league\nc.asetto corsa\n answer:' : 'b','\n 9.what is the highest grossing game of all time?\na.pokémon\nb.tetris\nc.street fighter\n answer: ' : 'a', '\n 10.whos on the cover of the video game madden nfl 18?\na.lebron james\nb.obj\nc.tom brady\n answer:' : 'c'}  
+  score = 0
+  
+  for n in n_questions.keys():
+    user_answer = input(n)
+    if n_questions.get(n) == user_answer:
+      score+= 1
+      print("correct")
+      print("score:", score )
+    else:
+      print("incorrect, the answer was:",n_questions.get(n))
+      print("score: " ,score)
+      print("\n")
+  print('thank you for playing my quiz!!!')   
+
+
+
+
+
+start()  
+quiz()
+ 
